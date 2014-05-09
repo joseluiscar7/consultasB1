@@ -29,7 +29,7 @@ $(function(){
 	btnconsulta.tap(function(){
 		$.ajax({
 			type:"POST",
-                        url:"consulta.php",
+                        url:" http://basededatosdispo.260mb.net/consultas/consulta.php",
 			//url:"consulta.php",
 			data: "",
 			success: consultando
@@ -81,7 +81,7 @@ function consultando(data){
 function enviar(marc,mod,col,prec){
 	$.ajax({
 		type: "POST",
-		url: "procesar.php",
+		url: "http://basededatosdispo.260mb.net/consultas/procesar.php",
 		//url: "procesar.php",
 		data: "Marca="+marc+"&Modelo="+mod+"&Color="+col+"&Precio="+prec,
 		success: onSuccess
@@ -103,7 +103,7 @@ function enviar(marc,mod,col,prec){
 function actualiza(colorac,colornu){
 	$.ajax({
 		type: "POST",
-		url: "actualizar.php",
+		url: "http://basededatosdispo.260mb.net/consultas/actualizar.php",
 		//url: "actualizar.php",
 		data: "ColorA="+colorac+"&ColorN="+colornu,
 		success: onSuccess
@@ -127,7 +127,7 @@ function actualiza(colorac,colornu){
 function elimina(idautomovil){
 	$.ajax({
 		type: "POST",
-		url: "eliminar.php",
+		url: "http://basededatosdispo.260mb.net/consultas/eliminar.php",
 		//url: "eliminar.php",
 		data: "IdAutomovil="+idautomovil,
 		success: onSuccess
